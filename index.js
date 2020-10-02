@@ -120,7 +120,6 @@ function fastifyStatic(fastify, opts, next) {
               route: pathname,
             });
           }
-          console.log("err    ", path.join(options.root, "index.html"));
           return reply
             .type("text/html")
             .send(fs.createReadStream(path.join(options.root, "index.html")));
